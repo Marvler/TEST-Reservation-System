@@ -19,4 +19,5 @@ public class Reservation {
     private String reservationIdentifier;
     private LocalDateTime reservationStart;
     private LocalDateTime reservationEnd;
+    private ConferenceRoom conferenceRoom;
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -16,5 +17,6 @@ public class Organization {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long organizationId;
     private String organizationName;
-
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<ConferenceRoom> conferenceRooms;
 }

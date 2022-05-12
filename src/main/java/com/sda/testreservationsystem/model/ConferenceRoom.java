@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -21,4 +22,6 @@ public class ConferenceRoom {
     private Boolean availability;
     private Integer numberOfSeats;
     private Integer numberOfStandings;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Reservation> reservations;
 }

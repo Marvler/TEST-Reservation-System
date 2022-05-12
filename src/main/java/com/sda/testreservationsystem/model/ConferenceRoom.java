@@ -20,4 +20,5 @@ public class ConferenceRoom {
     private Integer level;
     private Boolean availability;
     private Integer numberOfSeats;
+    private Integer numberOfStandings;
 }

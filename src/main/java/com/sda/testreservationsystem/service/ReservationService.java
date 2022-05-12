@@ -10,14 +10,11 @@ public class ReservationService {
 
     private final ConferenceRoomRepository conferenceRoomRepository;
     private final OrganizationRepository organizationRepository;
-    private final ReservationService reservationService;
 
     @Autowired
     public ReservationService(ConferenceRoomRepository conferenceRoomRepository,
-                              OrganizationRepository organizationRepository,
-                              ReservationService reservationService) {
+                              OrganizationRepository organizationRepository) {
         this.conferenceRoomRepository = conferenceRoomRepository;
         this.organizationRepository = organizationRepository;
-        this.reservationService = reservationService;
     }
 }
